@@ -23,6 +23,11 @@ export class RecipeService {
     new Recipe('Biryani', 'Hyderabadi', 'https://static.pexels.com/photos/556558/pexels-photo-556558.jpeg',
     [new Ingredient('Rice', 5000),
     new Ingredient('curd', 100),
+    new Ingredient('chicken', 500)]),
+    new Recipe('Haleem', 'Hyderabadi',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Haleem_hyderabadi.jpg/800px-Haleem_hyderabadi.jpg',
+     [new Ingredient('Oats', 5000),
+    new Ingredient('curd', 100),
     new Ingredient('chicken', 500)])
 
   ];
@@ -36,4 +41,7 @@ this.recipes.push(recipe);
   addToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
   }
+getRecipe(index: number) {
+  return this.recipes.slice()[index];
+}
 }
