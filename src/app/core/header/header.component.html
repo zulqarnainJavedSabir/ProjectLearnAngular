@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navber-herder">
+      <a routerLink="/" class="navbar-brand">Recipe Book</a>
+    </div>
+<div class="collapse navbar-collapse">
+  <ul class="nav navbar-nav">
+    <li routerLinkActive="active"><a  routerLink="/recipes" >Recipes</a></li>
+    <li routerLinkActive="active"><a  routerLink="/shopping-list">Shopping List</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li *ngIf="!UserStatus"><a   routerLink="/signup">Register</a></li>
+    <li *ngIf="!UserStatus"><a   routerLink="/signin">Log in</a></li>
+   <li *ngIf="UserStatus" ><a   routerLink="/recipes">{{userName }}</a>  </li>
+    <li *ngIf="UserStatus" class="dropdown" appDropdown>
+      <a  style="..." class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a style="..." (click)="onSaveData()">Save Data</a></li>
+        <li><a  style="..." (click)="onFetchData()" >Fetch Data</a></li>
+      </ul>
+    </li>
+    <li *ngIf="UserStatus"><a  style="cursor: pointer;" (click)="onLogOut()">Log Out</a></li>
+  </ul>
+</div>
+  </div>
+  </nav>

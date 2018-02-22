@@ -13,7 +13,7 @@ import { Ingredient } from '../../shared/ingredient.model';
 })
 export class RecipeEditComponent implements OnInit {
 form: FormGroup;
-ingredients = new FormArray([]);
+ingredients: FormArray = new FormArray([]);
 recipe: Recipe;
 
   constructor(private route: ActivatedRoute,
