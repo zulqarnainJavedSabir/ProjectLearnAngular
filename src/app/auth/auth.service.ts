@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
+// tslint:disable-next-line:import-blacklist
 import { Subject } from 'rxjs';
 @Injectable()
 export class AuthService {
